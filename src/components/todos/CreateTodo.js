@@ -13,6 +13,10 @@ class CreateTodo extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state)
+    this.setState({
+      text: '',
+    })
+    // we do this last line to clear out the input after we submit a todo.
   }
 
   handleChange(event) {
